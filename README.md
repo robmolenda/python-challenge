@@ -15,3 +15,7 @@ Code troubleshooting with ChatGPT for profit change if statement: https://chat.o
 
 Outputting to a text file: https://www.geeksforgeeks.org/reading-writing-text-files-python/
 
+Using DictReader in python to iterate CSV: https://courses.cs.washington.edu/courses/cse140/13wi/csv-parsing.html
+
+Counting unique values in CSV column: https://stackoverflow.com/questions/64857757/best-way-to-count-unique-values-from-csv-in-python
+
