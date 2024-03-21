@@ -1,4 +1,4 @@
-# python-challenge
+# Module 3 Challenge - Python
 In this challenge we use python to analyze data collected in two seperate CSV files. These files are opened and read with python, and then coded to output specific assigned results. 
 # Instructions
 Please download all files as a zip and open the folder in Visual Basic. The CSV file for each task is embedded in the folder, so please ensure you are running the python file from the correct directory.
