@@ -1,5 +1,6 @@
 import csv
 
+#declare variables
 dates = []
 monthly_change = 0
 total_months = 0
@@ -13,26 +14,29 @@ great_dec = ["",99999999999999999]
 
 
 #open file_path
-file = r'PyBank\budget_data.csv'
+file = r'budget_data.csv'
 #open file in read mode
 with open (file, 'r') as csv_file:
     csvreader = csv.reader(csv_file, delimiter=',')
     header = next(csvreader)
-    
+    #loop through csvreader to find total profit
     for row in csvreader:
         dates.append(row[0])    
         value = int(row[1])
         total_profit += value
+        #use if statement to find monthly profit change and average change
         if previous_profit != 0:
             profit_change = value - previous_profit
             monthly_change += profit_change
             new_value +=1
+            #use if statement to determine the greatest increase and decrease
             if profit_change > great_inc[1]:
                 great_inc = [row[0], profit_change]
             if profit_change < great_dec[1]:
                 great_dec = [row[0], profit_change]
         previous_profit = value
        
+#use len function to determine total months
 total_months = len(dates)
 if new_value > 0:
     average_change = monthly_change / new_value
@@ -50,7 +54,8 @@ print(f'Average Change: {average_change}')
 print(f'Greatest Increase: {great_inc}')
 print(f'Greatest Decrease: {great_dec}')
 
-file_path = r'PyBank\Analysis_Folder\PyBankAnalysist.txt'
+#export output to text file
+file_path = r'Analysis_Folder\PyBankAnalysis.txt'
 with open(file_path, 'w') as output:
     output.write('Financial Analysis\n')
     output.write('-------------------------\n')
