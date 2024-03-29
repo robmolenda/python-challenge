@@ -14,7 +14,7 @@ great_dec = ["",99999999999999999]
 
 
 #open file_path
-file = r'budget_data.csv'
+file = r'Resources/budget_data.csv'
 #open file in read mode
 with open (file, 'r') as csv_file:
     csvreader = csv.reader(csv_file, delimiter=',')

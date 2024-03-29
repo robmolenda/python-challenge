@@ -12,7 +12,7 @@ unique_candidates = set()
 
 
 #open file path
-file = r'election_data.csv'
+file = r'Resources/election_data.csv'
 with open (file, 'r', newline='') as csv_file:
     csvreader = csv.DictReader(csv_file)
     #loop through CSV reader to total votes for each candidate
